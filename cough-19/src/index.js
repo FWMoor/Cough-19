@@ -21,7 +21,6 @@ const useData = res => {
 	recovered.innerHTML = convertNumber(res.data.recovered.value);
 	deaths.innerHTML = convertNumber(res.data.deaths.value);
 	results.style.display = "block";
-	country.value = "";
 }
 
 const search = async name => {
