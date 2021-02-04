@@ -1,0 +1,11 @@
+body {
+	width: 300px;
+}
+
+.container {
+	margin: 1em;
+}
+
+.numbers {
+	float: right;
+}

@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "Cough-19!",
+	"version": "0.1.0",
+	"description": "Covid-19 Stats. Search for a specific country, or view the global totals. Made for fun out of boredom.",
+	"permissions": [
+		"<all_urls>"
+	],
+	"browser_action": {
+		"default_popup": "index.html"
+	},
+	"icons": {
+		"128": "icons/128.png"
+	}
+}

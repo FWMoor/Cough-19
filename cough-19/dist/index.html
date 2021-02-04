@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cough-19!</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-dark bg-primary justify-content-between">
+		<span class="navbar-brand">Cough-19!</span>
+		<button type="button" class="close text-white" aria-label="Close">&times;</button>
+	</nav>
+	<div class="container">
+		<form class="form mb-3">
+			<div class="form-group">
+				<label for="CountrySearch">Country Name:</label>
+				<input type="text" class="form-control country" id="CountrySearch" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-primary">Search</button>
+		</form>
+		<div class="errors"></div>
+		<div class="results">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<span><strong>Country:</strong></span> <span class="numbers countryName">Global</span>
+				</li>
+				<li class="list-group-item">
+					<span><strong>Total:</strong></span> <span class="numbers total"></span>
+				</li>
+				<li class="list-group-item">
+					<span><strong>Recovered:</strong></span> <span class="numbers recovered"></span>
+				</li>
+				<li class="list-group-item">
+					<span><strong>Deaths:</strong></span> <span class="numbers deaths"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+
+</html>
