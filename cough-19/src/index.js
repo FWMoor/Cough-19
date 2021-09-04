@@ -26,8 +26,14 @@ const useData = res => {
 const search = async name => {
 	errors.textContent = "";
 	try {
-		const res = await axios.get(`${api}/countries/${name}`);
-		countryName.textContent = name;
+		let res;
+		if (name == "" || name.toLowerCase() == "global") {
+			res = await axios.get(api);
+			countryName.textContent = "Global";
+		} else {
+			res = await axios.get(`${api}/countries/${name}`);
+			countryName.textContent = name;
+		}
 		useData(res);
 	} catch (err) {
 		results.style.display = "none";
@@ -48,8 +54,7 @@ window.onload = async () => {
 
 const handleClick = async e => {
 	e.preventDefault();
-	if (!!country.value)
-		search(country.value);
+	search(country.value);
 }
 
 form.addEventListener("submit", (e) => handleClick(e))
